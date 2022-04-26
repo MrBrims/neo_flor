@@ -1,0 +1,19 @@
+@font-face{
+  font-family: 'Marmelad';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Marmelad-Regular'),
+       url('../fonts/Marmelad-Regular.woff2') format('woff2'),
+       url('../fonts/Marmelad-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Nunito';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Nunito-Regular'),
+       url('../fonts/Nunito-Regular.woff2') format('woff2'),
+       url('../fonts/Nunito-Regular.woff') format('woff');
+  font-display: swap;
+}
