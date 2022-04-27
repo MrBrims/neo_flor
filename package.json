@@ -17,6 +17,7 @@
     "gulp-file-include": "^2.3.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify": "^3.0.2",
+    "rellax": "^1.12.1",
     "sass": "^1.43.3"
   }
 }
