@@ -3,7 +3,7 @@
 function scrollHeader() {
   const headerFixed = document.querySelector('.header')
 
-  if (this.scrollY >= 500) headerFixed.classList.add('scroll-header'); 
+  if (this.scrollY >= 50) headerFixed.classList.add('scroll-header'); 
   else headerFixed.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
