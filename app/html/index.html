@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,19 @@
   <link rel="stylesheet" href="css/style.min.css">
   <title>Лучшие флорариумы</title>
 </head>
+
 <body>
+  <div class="wrapper">
+    @@include("chunk/header.html")
+    @@include("chunk/hero.html")
+    @@include("chunk/describe.html")
+    @@include("chunk/specs.html")
+    <!-- @@include("chunk/footer.html") -->
+  </div>
 
-  @@include("chunk/header.html")
-
-  <!-- @@include("chunk/footer.html") -->
-
+  @@include("chunk/popup.html")
+  
   <script src="js/main.min.js"></script>
 </body>
+
 </html>

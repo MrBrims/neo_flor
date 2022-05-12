@@ -40,6 +40,8 @@ function styles() {
 function scripts() {
   return src([ 
     'node_modules/rellax/rellax.min.js',
+    'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/modal-video/js/modal-video.min.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))

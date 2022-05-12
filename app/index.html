@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,10 @@
   <link rel="stylesheet" href="css/style.min.css">
   <title>Лучшие флорариумы</title>
 </head>
-<body>
 
-  <header class="header">
+<body>
+  <div class="wrapper">
+    <header class="header lock-padding">
   <div class="header__inner">
     <div class="header__top">
       <div class="header__phone">
@@ -95,16 +97,223 @@
         </nav>
       </div>
       <div class="header__bottom-item">
-        <a href="#" class="header__btn">
+        <a href="#popup" class="header__btn popup-link">
           Связаться
         </a>
       </div>
     </div>
   </div>
 </header>
+    <section class="hero swiper mySwiper">
+  <div class="hero__slider swiper-wrapper">
+    <div class="hero__item swiper-slide" style="background-image: url(../images/hero-slider-1.jpg);">
+      <div class="hero__slider-content">
+        <h1 class="hero__slider-title">Флорариумы</h1>
+        <p class="hero__slider-subtitle">С подстветкой</p>
+        <p class="hero__slider-text">
+          Наслаждайтесь природой не только днем, но и ночью.<br> Быстро доставим в любой город, оплата при получении.
+        </p>
+        <a class="hero__slider-btn" href="#">Подробнее</a>
+      </div>
+    </div>
+    <div class="hero__item swiper-slide" style="background-image: url(../images/hero-slider-2.jpg);">
+      <div class="hero__slider-content">
+        <h1 class="hero__slider-title">Флорариумы</h1>
+        <p class="hero__slider-subtitle">С подстветкой</p>
+        <p class="hero__slider-text">
+          Наслаждайтесь природой не только днем, но и ночью.<br> Быстро доставим в любой город, оплата при получении.
+        </p>
+        <a class="hero__slider-btn" href="#">Подробнее</a>
+      </div>
+    </div>
+    <div class="hero__item swiper-slide" style="background-image: url(../images/hero-slider-3.jpg);">
+      <div class="hero__slider-content">
+        <h1 class="hero__slider-title">Флорариумы</h1>
+        <p class="hero__slider-subtitle">С подстветкой</p>
+        <p class="hero__slider-text">
+          Наслаждайтесь природой не только днем, но и ночью.<br> Быстро доставим в любой город, оплата при получении.
+        </p>
+        <a class="hero__slider-btn" href="#">Подробнее</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero__bottom">
+    <div class="container">
+      <div class="hero__bottom-inner">
+        <div class="hero__video" style="background-image: url(../images/hero-video.jpg);">
+          <div class="hero__video-text">
+            Посмотреть
+          </div>
+          <span class="hero__video-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path
+                d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z"
+                fill="rgba(255,255,255,1)" />
+            </svg>
+          </span>
+          <button class="hero__video-link js-modal-btn" data-video-id="BFPmi6Wp4ds"></button>
+        </div>
+        <div class="hero__bottom-control">
+          <div class="swiper-pagination"></div>
+          <div class="hero__bottom-fraction">
+            <div class="hero__bottom-current">1</div>
+            <div class="hero__bottom-sepparator"> / </div>
+            <div class="hero__bottom-total">1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="describe">
+  <div class="container">
+    <div class="describe__items">
+      <div class="describe__item describe__description">
+        <h2 class="describe__title">
+          Что такое флорариум
+        </h2>
+        <p class="describe__main-text">
+          Флорариум — композиция из растений в закрытой или открытой стеклянной емкости. Закрытый флорариум представляет собой
+          замкнутую экосистему, в которой создается благоприятная среда для тропических растений.
+        </p>
+        <p class="describe__main-text">
+          Мы занимаемся изготовлением уникальных природных флорариумов и экосистем с доставкой по России в розницу и оптом.
+        </p>
+      </div>  
+      <div class="describe__item describe__gift">
+        <h3 class="describe__gift-title describe__subtitle">
+          Идеальный подарок
+        </h3>
+        <p class="describe__text">
+          Как для женщин, так и для мужчин. В офис коллеге или начальнику, подруге на день рождения или Новый год, девушке на 8
+          марта или день святого Валентина.
+        </p>
+        <p class="describe__text">
+          Особенно наш флорариум понравится любителю природы, дизайнерских вещей и минимализма.
+        </p>
+      </div>  
+      <div class="describe__item describe__care">
+        <h3 class="describe__care-title describe__subtitle">
+          Простой уход
+        </h3>
+        <p class="describe__text">
+          Уход за флорариумом не сложнее, чем за любыми комнатными растениями в обычных горшках. Для него потребуется светлое
+          место без прямых солнечных лучей, полив по мере подсыхания 1 раза в месяц, в зависимости от условий.
+        </p>
+      </div>  
+    </div>
+  </div>
+</section>
+    <section class="specs">
+  <div class="container">
+    <h2 class="specs__title">Из чего состоит Флорариум</h2>
+    <div class="specs__inner">
+      <div class="specs__set">
+        <h4 class="specs__set-title">
+          Комплектация
+        </h4>
+        <div class="specs__set-item specs__set-florarium">
+          <div class="specs__set-text">
+            Флорариум в коробке
+          </div>
+        </div>
+        <div class="specs__set-item specs__set-cap">
+          <div class="specs__set-text">
+            Крышка с/без подсветки
+          </div>
+          <span>
+            На ваш выбор
+          </span>
+        </div>
+        <div class="specs__set-item specs__set-booklet">
+          <div class="specs__set-text">
+            Буклет по уходу
+          </div>
+        </div>
+        <div class="specs__set-item specs__set-charging">
+          <div class="specs__set-text">
+            Зарядный провод
+          </div>
+        </div>
+      </div>
+      <div class="specs__img-box">
+        <img class="specs__img specs__img-light" src="images/light.svg" alt="Синий свет">
+        <img class="specs__img specs__img-off" src="images/florarium-without-backlight.png" alt="Флорариум без подсветки">
+        <img class="specs__img specs__img-on" src="images/florarium-with-backlight.png" alt="Флорариум с подсветкой">
+      </div>
+      <div class="specs__structure">
+        <div class="specs__structure-lighting">
+          <h3 class="specs__structure-cap">
+            Экологичная пробка с подсветкой
+          </h3>
+          <div class="specs__structure-text">
+            Работает более 8 часов без подзарядки и заряжается магнитным кабелем от обычной USB-вилки. Цвет подсветки вы
+            можете
+            выбрать при оформлении заказа. Возможно управление с помощью пульта.
+          </div>
+          <div class="specs__structure-switch">
+            <span class="specs__structure-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M9.973 18H11v-5h2v5h1.027c.132-1.202.745-2.194 1.74-3.277.113-.122.832-.867.917-.973a6 6 0 1 0-9.37-.002c.086.107.807.853.918.974.996 1.084 1.609 2.076 1.741 3.278zM10 20v1h4v-1h-4zm-4.246-5a8 8 0 1 1 12.49.002C17.624 15.774 16 17 16 18.5V21a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.5C8 17 6.375 15.774 5.754 15z"
+                  fill="rgba(255,255,255,.25)" />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="specs__structure-items">
+          <h3 class="specs__structure-title specs__structure-plants">
+            Растения
+          </h3>
+          <h3 class="specs__structure-title specs__structure-moss">
+            Мох/мульча
+          </h3>
+          <h3 class="specs__structure-title specs__structure-substrate">
+            Субстрат
+          </h3>
+          <h3 class="specs__structure-title specs__structure-sphagnum">
+            Сфагнум
+          </h3>
+          <h3 class="specs__structure-title specs__structure-drainage">
+            Дренаж
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
+  </div>
 
+  <div class="popup" id="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <a class="popup__close close-popup" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path
+            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-9.414l2.828-2.829 1.415 1.415L13.414 12l2.829 2.828-1.415 1.415L12 13.414l-2.828 2.829-1.415-1.415L10.586 12 7.757 9.172l1.415-1.415L12 10.586z"
+            fill="#2eb872" />
+        </svg>
+      </a>
+      <h2 class="popup__title">
+        Есть дополнительные вопросы?
+      </h2>
+      <p class="popup__subtitle">
+        Оставьте свои контакты, мы перезвоним:
+      </p>
+      <form class="contact-form">
+        <input class="contact-form__input" type="tel" placeholder="Ваш телефон">
+        <input class="contact-form__input" type="text" placeholder="Ваше имя">
+        <input class="contact-form__btn" type="submit" value="Отправить"></input>
+      </form>
+    </div>
+  </div>
+</div>
   
-
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
