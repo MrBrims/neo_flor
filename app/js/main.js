@@ -13,9 +13,9 @@ window.addEventListener('scroll', scrollHeader)
 
 let rellax = new Rellax('.rellax');
 
-//Слайдер
+//Слайдер в шапке
 
-let swiper = new Swiper(".mySwiper", {
+let mySwiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   effect: "fade",
   loop: true,
@@ -30,12 +30,31 @@ let swiper = new Swiper(".mySwiper", {
 let mySliderAllSlides = document.querySelector('.hero__bottom-total');
 let mySliderCurrentSlide = document.querySelector('.hero__bottom-current');
 
-mySliderAllSlides.innerHTML = swiper.slides.length - 2;
+mySliderAllSlides.innerHTML = mySwiper.slides.length - 2;
 
-swiper.on('slideChange', function () {
-  let currentSlide = ++swiper.realIndex;
+mySwiper.on('slideChange', function () {
+  let currentSlide = ++mySwiper.realIndex;
   mySliderCurrentSlide.innerHTML = currentSlide;
 });
+
+
+//Слайдер для классической коллекции
+
+let mySwiper2 = new Swiper(".classicSlider", {
+  slidesPerView: 6,
+  slidesPerGroup: 1,
+  loop: true,
+  spaceBetween: 10,
+  pagination: {
+    el: ".classic__pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".classic__button-next",
+    prevEl: ".classic__button-prev",
+  },
+});
+
 
 //Попап
 

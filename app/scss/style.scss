@@ -133,7 +133,6 @@
 
 .hero {
   min-height: 100vh;
-  margin-bottom: 100px;
   &__item {
     width: 100%;
     height: calc(100vh - 40px);
@@ -331,8 +330,8 @@
   &__items {
     display: grid;
     grid-gap: 40px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
   }
   &__description {
     padding: 30px 30px 30px 0;
@@ -583,6 +582,134 @@
   }
   &__structure-drainage::after {
     background-image: url(../images/structure-drainage-icon.svg);
+  }
+}
+
+.classic {
+  overflow: hidden; 
+  &__text-box {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  &__text {
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 10px;
+    color: #848484;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 30px;
+      height: 1px;
+      background-color: #848484;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    font-size: 40px;
+    color: #848484;
+  }
+  &__control {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+  }
+  &__button-next,
+  &__button-prev {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  &__button-prev {
+    margin-right: 10px;
+  }
+  &__slider {
+    transform: translateX(120px);
+    user-select: none;
+  }
+  &__item {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0,0,0,.5);
+      z-index: 5;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+  &__item-text {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+  }
+  &__name {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__price {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  &__price-new {
+    color: #fff;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  &__price-old {
+    color: #e1e1e1;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background-color: #e1e1e1;
+    }
+  }
+  &__btn {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    background-color: $accent;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background-color: $hover;
+    }
   }
 }
 
