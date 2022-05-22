@@ -189,4 +189,5 @@ const swithcImgLight = document.querySelector('.specs__img-box')
 switchLight.addEventListener('click', ()=> {
   switchLight.classList.toggle('--active');
   swithcImgLight.classList.toggle('--active');
-})
+});
+
