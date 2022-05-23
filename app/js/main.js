@@ -55,6 +55,18 @@ let mySwiper2 = new Swiper(".classicSlider", {
   },
 });
 
+//Слайдер отзывов
+
+let mySwiper3 = new Swiper(".reviews__gallery", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  loop: true,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".reviews__gallery-next",
+    prevEl: ".reviews__gallery-prew",
+  },
+});
 
 //Попап
 
