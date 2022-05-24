@@ -203,3 +203,22 @@ switchLight.addEventListener('click', ()=> {
   swithcImgLight.classList.toggle('--active');
 });
 
+//Аккордеон
+
+const accordionFaq = document.querySelectorAll('.faq__accordion-question').forEach((el) => {
+  el.addEventListener('click', () => {
+
+    let accordionAnswer = el.nextElementSibling;
+
+    if (accordionAnswer.style.maxHeight) {
+      document.querySelectorAll('.faq__accordion-answer').forEach((el) => el.style.maxHeight = null)
+      document.querySelectorAll('.faq__accordion-question').forEach((el) => el.classList.remove('--active'))
+    } else {
+      document.querySelectorAll('.faq__accordion-answer').forEach((el) => el.style.maxHeight = null)
+      document.querySelectorAll('.faq__accordion-question').forEach((el) => el.classList.remove('--active'))
+      accordionAnswer.style.maxHeight = accordionAnswer.scrollHeight + 'px'
+      el.classList.add('--active')
+    }
+  })
+});
+

@@ -969,6 +969,131 @@
   }
 }
 
+.faq {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__accordion {
+    min-width: 640px;
+    width: 640px;
+    margin-right: 80px;
+  }
+  &__title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  &__accordion-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  &__accordion-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__accordion-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    svg path:nth-child(2) {
+      transition: all .3s ease-in-out;
+    }
+  }
+  &__accordion-question:hover .faq__accordion-icon {
+    background-color: $accent;
+    svg path:nth-child(2) {
+      fill: #fff;
+    }
+  }
+  &__accordion-question.--active .faq__accordion-icon {
+    transform: rotate(45deg);
+  }
+  &__accordion-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: all .3s ease-in-out;
+    padding-right: 50px;
+  }
+  &__contact {
+    padding: 30px;
+    border: 1px solid #c7c7c7;
+    border-radius: 10px;
+  }
+  &__contact-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__contact-subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  &__contact-input {
+    display: block;
+    padding: 15px 10px;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 10px;
+  }
+  &__contact-btn {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $accent;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 15px 10px;
+    transition: all .3s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      background-color: $hover;
+    }
+  }
+  &__contact-text {
+    font-size: 18px;
+  }
+  &__contact-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &__contact-messenger {
+    display: flex;
+    align-items: center;
+    min-width: 120px;
+  }
+  &__contact-whatsapp,
+  &__contact-telegram {
+    width: 50px;
+    height: 50px;
+    background-color: $accent;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background-color: $hover;
+    }
+  }
+  &__contact-whatsapp {
+    margin-right: 5px;
+  }
+}
+
 .popup {
   position: fixed;
   top: 0;
