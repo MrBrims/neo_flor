@@ -9,11 +9,14 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader)
 
 
-// Парралакс элементов при скролле
+// Парралакс элементов при движении мыши
 
-let rellax = new Rellax('.rellax');
+new Parallax(document.getElementById('scene'));
+new Parallax(document.getElementById('scene2'));
+new Parallax(document.getElementById('scene3'));
 
-//Слайдер в шапке
+
+// Слайдер в шапке
 
 let mySwiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
@@ -25,7 +28,7 @@ let mySwiper = new Swiper(".mySwiper", {
   },
 });
 
-//Добавление второй пагинации фракция к слайдеру
+// Добавление второй пагинации фракция к слайдеру
 
 let mySliderAllSlides = document.querySelector('.hero__bottom-total');
 let mySliderCurrentSlide = document.querySelector('.hero__bottom-current');
@@ -38,7 +41,7 @@ mySwiper.on('slideChange', function () {
 });
 
 
-//Слайдер для классической коллекции
+// Слайдер для классической коллекции
 
 let mySwiper2 = new Swiper(".classicSlider", {
   slidesPerView: 6,
@@ -55,7 +58,7 @@ let mySwiper2 = new Swiper(".classicSlider", {
   },
 });
 
-//Слайдер отзывов
+// Слайдер отзывов
 
 let mySwiper3 = new Swiper(".reviews__gallery", {
   slidesPerView: 3,
@@ -68,7 +71,7 @@ let mySwiper3 = new Swiper(".reviews__gallery", {
   },
 });
 
-//Попап
+// Попап
 
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
@@ -189,11 +192,11 @@ document.addEventListener('keydown', function (e) {
   }
 })();
 
-//Видео с ютуба
+// Видео с ютуба
 
 new ModalVideo('.js-modal-btn');
 
-//Включение подсветки флорариума
+// Включение подсветки флорариума
 
 const switchLight = document.querySelector('.specs__structure-switch');
 const swithcImgLight = document.querySelector('.specs__img-box')
@@ -203,7 +206,7 @@ switchLight.addEventListener('click', ()=> {
   swithcImgLight.classList.toggle('--active');
 });
 
-//Аккордеон
+// Аккордеон
 
 const accordionFaq = document.querySelectorAll('.faq__accordion-question').forEach((el) => {
   el.addEventListener('click', () => {
@@ -221,4 +224,61 @@ const accordionFaq = document.querySelectorAll('.faq__accordion-question').forEa
     }
   })
 });
+
+// Меню бургер
+
+const menuIcon = document.querySelector('.header__bottom-btn');
+const menuBurger = document.querySelector('.nav');
+if (menuIcon) {
+  menuIcon.addEventListener("click", function (e) {
+    menuIcon.classList.toggle('--active');
+    menuBurger.classList.toggle('--active');
+  });
+}
+
+// Плавная прокрутка
+
+const menuLinks = document.querySelectorAll('.go-to[data-goto]');
+if (menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth"
+      });
+      e.preventDefault();
+    }
+  }
+}
+
+// Активный пункт меню
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.nav__link').forEach((link) => {
+        link.classList.toggle(
+          '--active',
+          link.getAttribute('href').replace('#', '') === entry.target.id
+        );
+      });
+    }
+  });
+}, {
+  threshold: 0.5,
+});
+
+document.querySelectorAll('section').forEach(
+  (section) => observer.observe(section),
+);
+
+
 
