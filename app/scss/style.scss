@@ -85,7 +85,7 @@
       border-radius: 1px;
       background-color: #fff;
       right: 0;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
     &::before {
       top: 0;
@@ -183,10 +183,8 @@
 }
 
 .hero {
-  min-height: 100vh;
   &__item {
     width: 100%;
-    height: calc(100vh - 40px);
     position: relative;
     background-position: center;
     background-size: cover;
@@ -209,8 +207,7 @@
     justify-content: center;
     max-width: 1200px;
     padding: 0 15px;
-    min-height: 100vh;
-    margin: 0 auto;
+    margin: 277px auto;
   }
   &__slider-title {
     font-size: 100px;
@@ -382,20 +379,20 @@
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
   }
   &__description {
     padding: 30px 30px 30px 0;
-    height: 366px;
   }
   &__title {
     font-size: 34px;
     margin-bottom: 15px;
   }
   &__main-text {
-    margin-bottom: 15px;
     line-height: 1.4;
     font-size: 20px;
+  }
+  &__main-text + .describe__main-text {
+    margin-top: 15px;
   }
   &__subtitle {
     position: relative;
@@ -418,23 +415,24 @@
   }
   &__text {
     font-size: 16px;
-    margin-bottom: 10px;
+  }
+  &__text + .describe__text {
+    margin-top: 10px;
   }
   &__gift {
     grid-row: span 2;
     background-image: url(../images/describe__gift-img.jpg);
+    background-size: cover;
     width: 492px;
-    height: 648px;
     padding: 30px;
     border-radius: 6px;
   }
   &__care {
     background-image: url(../images/describe__care-img.jpg);
-    height: 242px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center right;
-    padding: 30px 200px 10px 30px;
+    background-position: center center;
+    padding: 30px 235px 10px 30px;
     border-radius: 6px;
   }
   &__gift-title::before {
@@ -509,7 +507,6 @@
     padding-right: 100px;
   }
   &__img-box {
-    min-width: 716px;
     width: 716px;
     height: 842px;
     position: relative;
@@ -518,7 +515,6 @@
     position: absolute;
     z-index: 5;
     width: 716px;
-    min-width: 716px;
     height: 842px;
     transition: all 0.3s ease-in-out;
   }
@@ -535,6 +531,7 @@
   }
   &__structure-lighting {
     margin-bottom: 90px;
+    max-width: 260px;
   }
   &__structure-cap {
     font-size: 20px;
@@ -547,6 +544,8 @@
     font-size: 15px;
     color: #b0b0b0;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
   }
   &__structure-switch {
     width: 150px;
@@ -943,21 +942,18 @@
     color: #fff;
   }
   &__steps {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     margin-bottom: 50px;
+    gap: 20px;
   }
   &__step {
-    width: 25%;
     height: 367px;
     padding: 20px 15px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100%;
-  }
-  &__step + .order__step {
-    margin-left: 20px;
+    background-size: cover;
   }
   &__step:nth-child(1) {
     background-image: url(../images/order/step-1.png);
@@ -1068,6 +1064,9 @@
     max-height: 0;
     transition: all 0.3s ease-in-out;
     padding-right: 50px;
+    p + p {
+      margin-top: 10px;
+    }
   }
   &__contact {
     padding: 30px;
@@ -1120,7 +1119,7 @@
   &__contact-messenger {
     display: flex;
     align-items: center;
-    min-width: 120px;
+    min-width: fit-content;
   }
   &__contact-whatsapp,
   &__contact-telegram {
@@ -1290,6 +1289,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
   }
   &__item-text {
     font-size: 18px;

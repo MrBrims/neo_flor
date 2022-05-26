@@ -44,7 +44,7 @@ mySwiper.on('slideChange', function () {
 // Слайдер для классической коллекции
 
 let mySwiper2 = new Swiper(".classicSlider", {
-  slidesPerView: 6,
+  slidesPerView: 1,
   slidesPerGroup: 1,
   loop: true,
   spaceBetween: 10,
@@ -56,18 +56,44 @@ let mySwiper2 = new Swiper(".classicSlider", {
     nextEl: ".classic__button-next",
     prevEl: ".classic__button-prev",
   },
+  breakpoints: {
+    450: {
+      slidesPerView: 2,
+    },
+    700: {
+      slidesPerView: 3,
+    },
+    900: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+    1500: {
+      slidesPerView: 6,
+    }, 
+  },
 });
 
 // Слайдер отзывов
 
 let mySwiper3 = new Swiper(".reviews__gallery", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   slidesPerGroup: 1,
   loop: true,
-  spaceBetween: 30,
+  spaceBetween: 10,
   navigation: {
     nextEl: ".reviews__gallery-next",
     prevEl: ".reviews__gallery-prew",
+  },
+  breakpoints: {
+    500: {
+      slidesPerView: 2,
+    },
+    1000: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   },
 });
 
