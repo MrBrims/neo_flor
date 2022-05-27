@@ -29,3 +29,7 @@ section {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.animate__animated {
+  animation-fill-mode: both;
+}

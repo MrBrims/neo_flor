@@ -306,5 +306,22 @@ document.querySelectorAll('section').forEach(
   (section) => observer.observe(section),
 );
 
+// Анимация при скролле
+
+let wow = new WOW(
+  {
+    boxClass: 'wow',
+    animateClass: 'animate__animated',
+    offset: 150,
+    mobile: true,
+    live: true,
+    callback: function (box) {
+    },
+    scrollContainer: null,
+    resetAnimation: true,
+  }
+);
+wow.init();
+
 
 

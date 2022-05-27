@@ -375,6 +375,7 @@
 }
 
 .describe {
+  overflow: hidden;
   &__items {
     display: grid;
     grid-gap: 40px;
@@ -446,6 +447,7 @@
 .specs {
   background-color: #1d252b;
   padding: 80px 0;
+  overflow: hidden;
   &__title {
     color: #fff;
     font-size: 40px;
@@ -865,6 +867,7 @@
 }
 
 .reviews {
+  overflow: hidden;
   &__wrapper {
     position: relative;
   }
@@ -1014,6 +1017,7 @@
 }
 
 .faq {
+  overflow: hidden;
   &__wrapper {
     display: flex;
     justify-content: space-between;
