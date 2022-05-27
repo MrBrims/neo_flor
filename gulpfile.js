@@ -53,10 +53,11 @@ function scripts() {
 
 function build() {
   return src([
-    'app/**/*.html',
+    'app/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js',
-    'app/images/**/*.*'
+    'app/images/**/*.*',
+    'app/fonts/**/*.*',
   ], { base: 'app' })
     .pipe(dest('dist'))
 }
